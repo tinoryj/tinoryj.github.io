@@ -3,6 +3,7 @@ layout: default
 title: Archives
 ---
 
+<meta name="robots" content="noindex,nofollow">
 <div class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
@@ -12,9 +13,10 @@ title: Archives
 
       <div class="archive-posts-list">
         <ul class="posts-list">
-        {% for post in site.posts %}
-          <li><a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}<small class="post-date">{{ post.date | date:"%Y-%m-%d" }}</small></a></li>
-        {% endfor %}
+          {% for post in site.posts %}
+          <li><a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}<small
+                class="post-date">{{ post.date | date:"%Y-%m-%d" }}</small></a></li>
+          {% endfor %}
         </ul>
       </div>
     </div>
