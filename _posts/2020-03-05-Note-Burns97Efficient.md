@@ -45,16 +45,6 @@ Design and implement a modified version storage system based on version jumping,
 * Reference counter stores the number of inbound edges to a node which is used for garbage collection.
 * When reference counter is 0, delete the node and decrease the counter of its reference.
 
-## Some Details
-
-* System structure of IBM ADSM:
-
-<img src="../img/paperReading/adsm-structure.png" width = "300" height = "200" alt="adsm" align=center />
-
-* Delta compression chains:
-
-<img src="../img/paperReading/deltaChain-versionJump.png" width = "300" height = "200" alt="deltaChain-versionJump" align=center />
-
 ## Summary
 
 ### Strength
