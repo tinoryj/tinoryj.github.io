@@ -3,7 +3,7 @@ layout: post
 title:  "Note : OBLIVIATE: A Data Oblivious File System for Intel SGX"
 date:   2019-01-26 12:00:00
 categories: PaperReading
-tags: [Reading]
+tags: [SGX, FileSystem]
 ---
 
 ## Reference

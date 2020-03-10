@@ -3,7 +3,7 @@ layout: post
 title:  "Note : Efficient distributed backup with delta compression"
 date:   2020-03-05 12:00:00
 categories: PaperReading
-tags: [Reading]
+tags: [FileSystem, Compression]
 ---
 
 ## Reference
@@ -48,9 +48,13 @@ Design and implement a modified version storage system based on version jumping,
 ## Some Details
 
 * System structure of IBM ADSM:
-![adsm](../img/paperReading/adsm.png)
+
+<img src="../img/paperReading/adsm-structure.png" width = "300" height = "200" alt="adsm" align=center />
+
 * Delta compression chains:
-![deltaChain-versionJump](../img/paperReading/deltaChain-versionJump.png)
+
+<img src="../img/paperReading/deltaChain-versionJump.png" width = "300" height = "200" alt="deltaChain-versionJump" align=center />
+
 ## Summary
 
 ### Strength
