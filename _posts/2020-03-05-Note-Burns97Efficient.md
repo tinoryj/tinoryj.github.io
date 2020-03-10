@@ -1,14 +1,18 @@
 ---
 layout: post
 title:  "Note : Efficient distributed backup with delta compression"
-date:   2020-03-09 12:00:00
+date:   2020-03-05 12:00:00
 categories: PaperReading
 tags: [Reading]
 ---
 
+## Reference
+
+> Randal C Burns, and Darrell E. Long. [Efficient distributed backup with delta compression](https://dl.acm.org/doi/10.1145/266220.266223). In Proc. Of IOPADS, 1997.
+
 ## What
 
-Design and implement a modified version storage system based on version jumping, which could restore delta encoded file versions with at most two accesses to teriary storage to minimizes server workload and network transmission time on file restore. Meanwhile, at client side, a small file stored which contains copies of previously backed up files retains versions in order to generate delta files.
+Design and implement a modified version storage system based on version jumping, which could restore delta encoded file versions with at most two accesses to teriary storage to minimizes server workload and network transmission time on file restore. Meanwhile, at client side, a small file stored which contains copies of previously backed up files retains versions in order to generate delta files. <!-- more -->
 
 ## Why
 
@@ -44,13 +48,9 @@ Design and implement a modified version storage system based on version jumping,
 ## Some Details
 
 * System structure of IBM ADSM:
-
- <img src="../img/paperReading/adsm.png" width = "600" height = "300" alt="adsm" align=center/>
- 
+![adsm](../img/paperReading/adsm.png)
 * Delta compression chains:
-
- <img src="../img/paperReading/deltaChain-versionJump.png" width = "600" height = "300" alt="deltaChain-versionJump" align=center/>
-
+![deltaChain-versionJump](../img/paperReading/deltaChain-versionJump.png)
 ## Summary
 
 ### Strength

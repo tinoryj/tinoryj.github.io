@@ -1,12 +1,19 @@
 ---
 layout: post
 title:  "Note : OBLIVIATE: A Data Oblivious File System for Intel SGX"
-date:   2020-03-09 13:00:00
+date:   2019-01-26 12:00:00
 categories: PaperReading
 tags: [Reading]
 ---
 
-OBLIVIATE redesigned ORAM for SGX filesystem operations for confuse access patterns to protect user privacy.
+## Reference
+
+> Ahmad, Adil and Kim, Kyungtae and Sarfaraz, Muhammad Ihsanulhaq and Lee, Byoungyoung [OBLIVIATE: A Data Oblivious File System for Intel SGX](http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/02/ndss2018_06A-2_Ahmad_paper.pdf).  internetsociety, 2018.
+
+
+## What
+
+OBLIVIATE redesigned ORAM for SGX filesystem operations for confuse access patterns to protect user privacy. It is a data oblivious filesystem for Intel SGX which adapting the ORAM protocol to read and write data from a file within an SGX enclave. It supports SGX programs without changes in application layer. <!-- more -->
 
 ## Why
  
@@ -20,9 +27,6 @@ All existing SGX filesystems are vulnerable to system call snooping, page fault,
 * Maintain ORAM server storage efficiently -> Additional security memory region with non-encrypted memory regions of SGX (Avoid costly context switches).
 * Reduce ORAM latency -> Asynchronous ORAM server update (Returns the required data when available and performs path updates asynchronously, rather than waiting for expensive ORAM path updates).
 
-## What
-
-Data oblivious filesystem for Intel SGX which adapting the ORAM protocol to read and write data from a file within an SGX enclave. It supports SGX programs without changes in application layer.
 
 ## Some Detail
 
