@@ -8,7 +8,7 @@ tags: [FileSystem, Compression, Deduplication]
 
 ## Reference
 
-> W. Xia, H. Jiang, D. Feng, and L. Tian, [Combining deduplication and delta compression to achieve low-overhead data reduction on backup datasets](https://cswxia.github.io/pub/dcc-wen-delta-2014.pdf), in Proc. IEEE DCC, 2014.
+> W. Xia, H. Jiang, D. Feng, and L. Tian, [Combining deduplication and delta compression to achieve low-overhead data reduction on backup datasets](https://cswxia.github.io/pub/dcc-wen-delta-2014.pdf), In Proc. of IEEE DCC, 2014.
 
 ## What
 

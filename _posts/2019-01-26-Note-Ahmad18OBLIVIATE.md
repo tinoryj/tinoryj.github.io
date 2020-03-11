@@ -8,7 +8,7 @@ tags: [SGX, FileSystem]
 
 ## Reference
 
-> Ahmad, Adil and Kim, Kyungtae and Sarfaraz, Muhammad Ihsanulhaq and Lee, Byoungyoung [OBLIVIATE: A Data Oblivious File System for Intel SGX](http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/02/ndss2018_06A-2_Ahmad_paper.pdf).  In Proc. Of NDSS, 2018.
+> Ahmad, Adil and Kim, Kyungtae and Sarfaraz, Muhammad Ihsanulhaq and Lee, Byoungyoung [OBLIVIATE: A Data Oblivious File System for Intel SGX](http://wp.internetsociety.org/ndss/wp-content/uploads/sites/25/2018/02/ndss2018_06A-2_Ahmad_paper.pdf).  In Proc. of NDSS, 2018.
 
 
 ## What

@@ -9,7 +9,7 @@ tags: [FileSystem, Deduplication]
 
 ## Reference
 
-> Chun-Ho Ng and Patrick P. C. Lee. [RevDedup: A Reverse Deduplication Storage System Optimized for Reads to Latest Backups](http://www.cse.cuhk.edu.hk/~pclee/www/pubs/apsys13.pdf). In Proc. Of APSYS, 2013.
+> Chun-Ho Ng and Patrick P. C. Lee. [RevDedup: A Reverse Deduplication Storage System Optimized for Reads to Latest Backups](http://www.cse.cuhk.edu.hk/~pclee/www/pubs/apsys13.pdf). In Proc. of APSYS, 2013.
 
 ## What
 

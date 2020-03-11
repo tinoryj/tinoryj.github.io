@@ -8,7 +8,7 @@ tags: [SGX, System]
 
 ## Reference
 
-> Orenbach, Meni and Lifshits, Pavel and Minkin, Marina and Silberstein, Mark. [Eleos: ExitLess OS services for SGX enclaves](https://dl.acm.org/citation.cfm?id=3064219). In Proc of the Twelfth European Conference on Computer Systems, 2017. 
+> Orenbach, Meni and Lifshits, Pavel and Minkin, Marina and Silberstein, Mark. [Eleos: ExitLess OS services for SGX enclaves](https://dl.acm.org/citation.cfm?id=3064219). In Proc. of the Twelfth European Conference on Computer Systems, 2017. 
 
 ## What
 

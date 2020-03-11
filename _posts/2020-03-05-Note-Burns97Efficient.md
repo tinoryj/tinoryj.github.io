@@ -8,7 +8,7 @@ tags: [FileSystem, Compression]
 
 ## Reference
 
-> Randal C Burns, and Darrell E. Long. [Efficient distributed backup with delta compression](https://dl.acm.org/doi/10.1145/266220.266223). In Proc. Of IOPADS, 1997.
+> Randal C Burns, and Darrell E. Long. [Efficient distributed backup with delta compression](https://dl.acm.org/doi/10.1145/266220.266223). In Proc. of IOPADS, 1997.
 
 ## What
 
