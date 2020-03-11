@@ -40,7 +40,7 @@ The system has two deployment methods :
 
 The overall structure of the system is shown below:
 
-![SDFSWorkflo](../img/sdfs/SDFSWorkflow.png)
+![SDFSWorkflo](./img/sdfs/SDFSWorkflow.png)
 
 The system mainly consists of the following four parts, where Dedup File Engine and Dedup Storage Engine are the main components of the SDFS system:
 
@@ -53,7 +53,7 @@ The system mainly consists of the following four parts, where Dedup File Engine 
 
 The workflow of the Dedup File Engine is shown below : 
 
-![SDFSWorkflow-FSS](../img/sdfs/SDFSWorkflow-FSS.png)
+![SDFSWorkflow-FSS](./img/sdfs/SDFSWorkflow-FSS.png)
 
 
 This section will explain how the Dedup File Engine works and related system implementations.
@@ -136,7 +136,7 @@ This part is implemented at `/sdfs/src/org.opendedup/sdfs/servers/`, `/sdfs/src/
 
 The workflow of `Dedup Storage Engine` is shown below : 
 
-![DSE-FWorkflo](../img/sdfs/DSE-FWorkflow.png)
+![DSE-FWorkflo](./img/sdfs/DSE-FWorkflow.png)
 
 
 
@@ -183,40 +183,40 @@ The DSE creates new blocks as data is unique data is written into the DSE. Each 
 
 After mounting the SDFS file system via `mount -t sdfs pool0 /media/pool0`, SDFS will generate the following folders in `/opt/sdfs/volumes/pool0` directory(only in standalone model, the `chunkstore/` and `keys/`folder will appear here): 
 
-![Screen Shot 2018-10-27 at 22.28.47](../img/sdfs/Screen%20Shot%202018-10-27%20at%2022.28.47.png)
+![Screen Shot 2018-10-27 at 22.28.47](./img/sdfs/Screen%20Shot%202018-10-27%20at%2022.28.47.png)
 
 
 #### ChunkStore/ folder: 
 
 This folder contains ChunkStore & HashStore in DSE part (defined in `DSEconfigWriter.java` line 115 to line 118). 
 
-![Screen Shot 2018-10-27 at 22.56.44](../img/sdfs/Screen%20Shot%202018-10-27%20at%2022.56.44.png)
+![Screen Shot 2018-10-27 at 22.56.44](./img/sdfs/Screen%20Shot%202018-10-27%20at%2022.56.44.png)
 
 
 `ChunkStore/chunks` will store all unique chunk's logic data (folders sort by the first 3 number of chunk hash)
-![Screen Shot 2018-10-27 at 22.00.44](../img/sdfs/Screen%20Shot%202018-10-27%20at%2022.00.44.png)
+![Screen Shot 2018-10-27 at 22.00.44](./img/sdfs/Screen%20Shot%202018-10-27%20at%2022.00.44.png)
 
 `ChunkStore/hdb-xxxx` will store HashStore's DB. This DB stores all unique chunk's index & path to find that chunk.
 
-![Screen Shot 2018-10-27 at 22.01.22](../img/sdfs/Screen%20Shot%202018-10-27%20at%2022.01.22.png)
+![Screen Shot 2018-10-27 at 22.01.22](./img/sdfs/Screen%20Shot%202018-10-27%20at%2022.01.22.png)
 
 #### files/ folder: 
 
 This folder contains all the files‘ symbol link (soft link). (The file has ever written into the mounted volume.)
-![Screen Shot 2018-10-27 at 21.58.38](../img/sdfs/Screen%20Shot%202018-10-27%20at%2021.58.38.png)
+![Screen Shot 2018-10-27 at 21.58.38](./img/sdfs/Screen%20Shot%202018-10-27%20at%2021.58.38.png)
 
 
 #### ddb/ folder: 
 
 This folder contains the HashMap for every single file in the client side (see: metadata file: mapping). This kind of files will end up with `.map` (save the data struct of HashMap & all data in it).
    
-![Screen Shot 2018-10-27 at 22.02.58](../img/sdfs/Screen%20Shot%202018-10-27%20at%2022.02.58.png)
+![Screen Shot 2018-10-27 at 22.02.58](./img/sdfs/Screen%20Shot%202018-10-27%20at%2022.02.58.png)
 
 #### keys/ folder
 
 This folder is the other one which should show up in  DSE server side (but for the standalone model it will store with the client side files). This `volume.keystore` will store the associated maps of chunk blocks.
 
-![Screen Shot 2018-10-27 at 22.36.02](../img/sdfs/Screen%20Shot%202018-10-27%20at%2022.36.02.png)
+![Screen Shot 2018-10-27 at 22.36.02](./img/sdfs/Screen%20Shot%202018-10-27%20at%2022.36.02.png)
 
 
 ### Deduplication workflow in a standalone mode
