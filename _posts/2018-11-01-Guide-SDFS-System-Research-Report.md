@@ -6,9 +6,9 @@ categories: TechnicalAnalysis
 tags: [OpenSourceSystem]
 ---
 
-**Table of Contents**
+<!-- **Table of Contents**
 
-[TOC]
+[TOC] -->
 
 ## Introduction
 
@@ -23,7 +23,7 @@ The system has two deployment methods :
 * Multi-Node Configuration
 
 > The deployment method actually allows the user to store data at least one remote end.
-
+ <!-- more -->
 ## System Architecture
 
 > Key Words Table
