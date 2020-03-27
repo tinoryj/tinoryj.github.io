@@ -16,15 +16,15 @@ tags: [FileSystem, Deduplication, Sketch]
     * Managing storage capacities in storage systems with deduplication.
     * Capacity queries for volume groups across multiple storage systems.
     * 1 PB Volume, metadata using 10TB, sketching using 300MB.
+    
 <!-- more -->
 ## Why
+
 Deduplication challenges storage management: Physical capacities associated with volumes are no longer readily available. 
 
 1. Cross-volume deduplication: no longer clear which volume owns what data.
-
 2. Computational challenge:
     * No deduplication -> aggregated per each volume.
-    
     * With deduplication-> Volume capacity are affected by any write operation to any volume in the system.
 
 ## How
