@@ -3,7 +3,7 @@ layout: post
 title:  "Note : OPERA: Open Remote Attestation for Intel's Secure Enclaves"
 date:   2020-03-27 12:00:00
 categories: PaperReading
-tags: [Tunning, FileSystem]
+tags: [SGX, Security]
 ---
 
 ## Reference
