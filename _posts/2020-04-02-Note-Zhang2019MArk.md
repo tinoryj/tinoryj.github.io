@@ -3,7 +3,7 @@ layout: post
 title:  "Note : MArk: Exploiting Cloud Services for Cost-Effective, SLO-Aware Machine Learning Inference Serving"
 date:   2020-04-02 12:00:00
 categories: PaperReading
-tags: [SGX, Security]
+tags: [MachineLearning, Scheduling]
 ---
 
 ## Reference
