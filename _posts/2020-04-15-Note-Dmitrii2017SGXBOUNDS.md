@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Note : SGXBOUNDS: Memory safety for shielded execution"
-date:   2020-04-13 12:00:00
+date:   2020-04-15 12:00:00
 categories: PaperReading
 tags: [SGX]
 ---
