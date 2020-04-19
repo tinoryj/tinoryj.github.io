@@ -3,7 +3,7 @@ layout: post
 title:  "Note : Strong and Efficient Consistency with Consistency-Aware Durability"
 date:   2020-03-24 12:00:00
 categories: PaperReading
-tags: [FileSystem, Dutability]
+tags: [FileSystem, Durability]
 ---
 
 ## Reference

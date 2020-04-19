@@ -3,7 +3,7 @@ layout: post
 title:  "Note : Speculative Encryption on GPU Applied to Cryptographic File Systems"
 date:   2020-02-23 12:00:00
 categories: PaperReading
-tags: [FileSystem, Encryption, GPU]
+tags: [FileSystem, Security, GPU]
 ---
 
 ## Reference

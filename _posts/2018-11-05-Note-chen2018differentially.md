@@ -3,7 +3,7 @@ layout: post
 title:  "Note : Differentially Private Access Patterns for Searchable Symmetric Encryption"
 date:   2018-11-05 12:00:00
 categories: PaperReading
-tags: [Encryption]
+tags: [Security]
 ---
 
 ## Reference
