@@ -3,7 +3,7 @@ layout: post
 title:  "Note : GoSeed: Generating an Optimal Seeding Plan for Deduplicated Storage"
 date:   2020-03-15 12:00:00
 categories: PaperReading
-tags: [Deduplication, DataMigration, FileSystem, ILP]
+tags: [Deduplication, Secheduling, FileSystem]
 ---
 
 ## Reference

@@ -3,7 +3,7 @@ layout: post
 title:  "Note : PANOPLY: Low-TCB Linux Applications with SGX Enclaves"
 date:   2019-02-09 12:00:00
 categories: PaperReading
-tags: [SGX, System]
+tags: [SGX]
 ---
 
 ## Reference

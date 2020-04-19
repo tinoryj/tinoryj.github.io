@@ -3,7 +3,7 @@ layout: post
 title:  "Note : Sketching Volume Capacities in Deduplicated Storage"
 date:   2019-03-27 12:00:00
 categories: PaperReading
-tags: [FileSystem, Deduplication, Sketch]
+tags: [FileSystem, Deduplication, DataStructure]
 ---
 
 ## Reference

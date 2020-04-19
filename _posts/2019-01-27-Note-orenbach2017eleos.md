@@ -3,7 +3,7 @@ layout: post
 title:  "Note : Eleos: ExitLess OS Services for SGX Enclaves"
 date:   2019-01-27 12:00:00
 categories: PaperReading
-tags: [SGX, System]
+tags: [SGX]
 ---
 
 ## Reference

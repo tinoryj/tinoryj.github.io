@@ -3,7 +3,7 @@ layout: post
 title:  "SDFS system structure analysis"
 date:   2018-11-05 12:00:00
 categories: TechnicalAnalysis
-tags: [OpenSourceSystem]
+tags: [FileSystem]
 ---
 
 <!-- **Table of Contents**

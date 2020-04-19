@@ -3,7 +3,7 @@ layout: post
 title:  "Note : Sharding the Shards: Managing Datastore Locality at Scale with Akkio"
 date:   2020-04-10 12:00:00
 categories: PaperReading
-tags: [System]
+tags: [FileSystem]
 ---
 
 ## Reference

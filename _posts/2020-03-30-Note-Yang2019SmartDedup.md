@@ -3,7 +3,7 @@ layout: post
 title:  "Note : SmartDedup: Optimizing Deduplication for Resource-constrained Devices"
 date:   2020-03-30 12:00:00
 categories: PaperReading
-tags: [Deduplication, Filesystem]
+tags: [Deduplication, FileSystem]
 ---
 
 ## Reference

@@ -3,7 +3,7 @@ layout: post
 title:  "Note : ENDBOX: Scalable Middlebox Functions Using Client-Side Trusted Execution"
 date:   2019-02-12 12:00:00
 categories: PaperReading
-tags: [SGX, System]
+tags: [SGX]
 ---
 
 ## Reference

@@ -3,7 +3,7 @@ layout: post
 title:  "Note : Extension Framework for File Systems in User space"
 date:   2020-02-21 12:00:00
 categories: PaperReading
-tags: [FileSystem, System]
+tags: [FileSystem]
 ---
 
 ## Reference

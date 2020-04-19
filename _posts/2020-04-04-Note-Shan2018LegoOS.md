@@ -3,7 +3,7 @@ layout: post
 title:  "Note : LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation"
 date:   2020-04-04 12:00:00
 categories: PaperReading
-tags: [System]
+tags: [OperatingSystem]
 ---
 
 ## Reference
