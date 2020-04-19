@@ -3,7 +3,7 @@ layout: post
 title:  "Note : Wormhole: A Fast Ordered Index for In-memory Data Management"
 date:   2020-04-18 12:00:00
 categories: PaperReading
-tags: [SGX]
+tags: [Index]
 ---
 
 ## Reference
