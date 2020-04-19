@@ -14,8 +14,6 @@ tags: [SGX]
 
 A new ordered index structure, named **Wormhole**, which takes O(log L) worst-case time for looking up a key with a length of L.
 
-The low cost is achieved by simultaneously leveraging strengths of three indexing structures, namely hash table, prefix tree, and B+ tree, to orchestrate a single fast ordered index. Wormhole’s range operations can be performed by a linear scan of a list after an initial lookup. This improvement of access efficiency does not come at a price of compromised space efficiency. Instead,Wormhole’s index space is comparable to those ofB+ tree and skip list. Experiment results show that Wormhole outperforms skip list, B+ tree, ART, and Masstree by up to 8.4×, 4.9×, 4.3×, and 6.6× in terms ofkey lookup throughput, respectively.
-
 <!-- more -->
 
 ## Why
@@ -47,7 +45,7 @@ Problems with current index for in-memory data management systems (e.g., Key-val
 ![b+ tree](img/paperReading/Wormhole-BTree.jpg)
 
 * A leaf node's size is bounded in a predefined range $[\lceil \frac{2}{k} \rceil,k]$
-* Majro search cost in MetaTree is between $log_2N$ (N is the number of index keys)
+* Major search cost in MetaTree is between $log_2N$ (N is the number of index keys)
 * As the B+ tree grows, the MetaTree will contain more levels of internal nodes, and the search cost will increase at a rate of O(logN).
 
 ### Replacing MetaTree
