@@ -12,21 +12,15 @@ tags: [DataStructure]
 
 ## What
 
-
-
 <!-- more -->
 
 ## Why
 
-
 ## Main Idea
-
 
 ## Design Goals
 
-
 ## How
-
 
 ## Summary
 
