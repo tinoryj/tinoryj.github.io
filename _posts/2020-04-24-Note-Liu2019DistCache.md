@@ -42,7 +42,7 @@ DistCache, a new distributed caching mechanism that provides provable (query) lo
     * **Cache Replication**: high cache coherence cost.
     * **Cache Partition** : lead to imblance in different nodes.
 
-## Main Idea
+### Main Idea
 
 ![Challenges](img/paperReading/DistCache-Idea.JPG)
 ![Challenges](img/paperReading/DistCache-Analysis.JPG)
@@ -71,7 +71,7 @@ DistCache, a new distributed caching mechanism that provides provable (query) lo
 * Switch-based distributed caching:
   * client side switch decides which cache node to use (PoT);
   * All switchs are programmable switches;  
-  * New designed network packet format (add cache informations in packet headers)
+  * New designed network packet format (add cache information in packet headers)
 
 ## Summary
 
