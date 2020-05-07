@@ -15,13 +15,13 @@ tags: [Tunning, FileSystem]
 Carver is a file system parameters selection and tunning method, which uses:
 * Variance-based metric to quantify storage parameters' importance.
 * Latin Hypercube Sampling to sample huge parameter spaces,
-* Greedy but efficient parameter-selection algorithm to identify important parameters. 
+* Greedy but the efficient parameter-selection algorithm to identify important parameters. 
 
 <!-- more -->
 
 ## Why
 
-* Storage system parameters' default setting are often no optimal, the best parameters can provide significant gains (performance, latency, space). 
+* Storage system parameters' default setting is often not optimal, the best parameters can provide significant gains (performance, latency, space). 
 * Storage system parameter space is huge (Ext4: 59 parameters with $10^{37}$ configs). 
 * Parameters are not equally important.
 * Tunning result is just for current hardware or workloads, which is not transferable.
@@ -43,7 +43,7 @@ Carver is a file system parameters selection and tunning method, which uses:
 *  Relative Standard Deviation (RSD) or Coefficient of Variation (COV) to define parameter stopping condition. 
 * The RSD of a set S of configurations is defined as (N is the number of configurations and $\mu$ is the mean throughput of configurations within S):
 
-![RSD](./img/paperReading/carver-1.png)
+![RSD](./img/paper reading/carver-1.png)
 
 
 ## Summary
@@ -55,5 +55,5 @@ Carver is a file system parameters selection and tunning method, which uses:
 
 ### Weakness
 
-* The parameter setting obtained by this method is still an near-optimal solution.
+* The parameter setting obtained by this method is still a near-optimal solution.
 * This method is more like reducing the complexity of brute force calculations and forming a parameter importance experience without forming an axiomatic parameter setting scheme.

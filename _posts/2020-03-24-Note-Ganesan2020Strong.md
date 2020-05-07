@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Note : Strong and Efficient Consistency with Consistency-Aware Durability"
+title:  "Note: Strong and Efficient Consistency with Consistency-Aware Durability"
 date:   2020-03-24 12:00:00
 categories: PaperReading
 tags: [FileSystem, Durability]
@@ -8,7 +8,7 @@ tags: [FileSystem, Durability]
 
 ## Reference
 
-> Aishwarya Ganesan, Ramnatthan Alagappan, Andrea Arpaci-Dusseau,and Remzi Arpaci-Dusseau. [Strong and Efficient Consistency with Consistency-Aware Durability](https://www.usenix.org/system/files/fast20-ganesan.pdf). In Proc. of USENIX FAST, 2020. (**Awarded Best Paper**)
+> Aishwarya Ganesan, Ramnatthan Alagappan, Andrea Arpaci-Dusseau, and Remzi Arpaci-Dusseau. [Strong and Efficient Consistency with Consistency-Aware Durability](https://www.usenix.org/system/files/fast20-ganesan.pdf). In Proc. of USENIX FAST, 2020. (**Awarded Best Paper**)
 
 ## What
 
@@ -26,14 +26,14 @@ Existing durability models cannot achieve both high performance and strong consi
     * **Shifts the point of durability to reads from writes**: reads do not immediately follow writes – natural in many workloads.
     * A read from a client guaranteed to return at least the latest state returned to a previous read from any client.
     * Does not prevent staleness like many weaker models
-* OCRA implement consistency aware durability and cross client monotonic reads in *leader based majority systems*
+* OCRA implement consistency aware durability and cross-client monotonic reads in *leader based majority systems*
     * Write path: immediately ack writes, and replication & persistence in background.
     * Read path:
         * Durable-index: index of the latest durable item in the system.
         * Update-index of item i: index of the last update that modified i.
-        * Durability check: i durable if update-index of i ≤ durable-index of system.
-        * If i's update-index <= durable-index, read immediately. If not, make durable before read.
-    * Cross Client Monotonic Reads in ORCA: read only at leader node.
+        * Durability check: I durable if update-index of I ≤ durable-index of system.
+        * If i's update-index <= durable-index, read immediately. If not, make durable before reading.
+    * Cross Client Monotonic Reads in ORCA: read-only at leader node.
 
 ## Some Details
 
@@ -44,7 +44,7 @@ Existing durability models cannot achieve both high performance and strong consi
     * Causal
     * PRAM (Parallel Random Access Machine)
     * Monotonic reads
-    * Eventual: Return write success before synchronously replicate and persist. Many deployments prefer eventual durability for performance (MongoDB, Redis)
+    * Eventual: Return writes success before synchronously replicate and persist. Many deployments prefer eventual durability for performance (MongoDB, Redis)
 * Durability models:
     * Immediate durability: Strong consistency & Slow
     * Eventual durability: Weak consistency & Fast
