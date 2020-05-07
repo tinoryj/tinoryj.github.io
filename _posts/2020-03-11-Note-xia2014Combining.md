@@ -55,7 +55,7 @@ $$
 * Theoretical and practical analysis of the difference in the effectiveness of feature / super feature number on similarity check.
 * Comprehensive experiments for different similarity detect configure.
 
-### Weekness
+### Weakness
 
 * The performance of DARE is highly dependent on high-throughput io devices such as ssd, but even though, the performance is still significantly lower than the io device performance, which indicates that there is a large computational overhead.
 * The cost of super feature calculation is analyzed in detail, but the cost of `Duplicate-Adjacency` is not analyzed separately, which cannot indicate whether the trade-off between the storage space savings of about 6% and the performance degradation is reasonable.

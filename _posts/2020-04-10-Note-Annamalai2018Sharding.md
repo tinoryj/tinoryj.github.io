@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Note : Sharding the Shards: Managing Datastore Locality at Scale with Akkio"
+title:  "Note: Sharding the Shards: Managing Datastore Locality at Scale with Akkio"
 date:   2020-04-10 12:00:00
 categories: PaperReading
 tags: [FileSystem]
@@ -20,15 +20,15 @@ A locality management service called "**Akkio**", which is layered between clien
 
 * Capital and operational costs matter: $2 million per 100 petabytes per month.
 * Service request movements: The load of the data center is uneven, and can only choose to expand the capacity when facing hot spots.
-* Low read-write ratios: Fully-replicated data would incur significant cross-datacenter communication, as all replicas would have to be updated on writes.
+* Low read-write ratios: Fully-replicated data would incur significant cross-data center communication, as all replicas would have to be updated on writes.
 * Ineffectiveness of distributed caches:
     * In order to ensure the hit rate, the data center cache requires huge hardware input.
-    * Low read-write ratios lead to excessive communication over cross-datacenter links, because the data being written will be remote.
-    * Require strong consistency. It significantly increases the complexity of the solution, and it incurs a large amount of extra cross-datacenter communication, further exacerbating WAN latency overheads.
+    * Low read-write ratios lead to excessive communication over cross-data center links because the data being written will be remote.
+    * Require strong consistency. It significantly increases the complexity of the solution, and it incurs a large amount of extra cross-data center communication, further exacerbating WAN latency overheads.
      
 ## How 
 
-Design and implementation in the context of a single client application service "**ViewState**", which uses ZippyDB as its its underlying datastore system.
+Design and implementation in the context of a single client application service "**ViewState**", which uses ZippyDB as its underlying data storage system.
 * System overview
 ![AKKIO overview](img/paperReading/AKKIO-1.jpg)
 * The Akkio Location Service (ALS)
@@ -63,7 +63,7 @@ Design and implementation in the context of a single client application service 
 
 * Facebook commercialization system, the effectiveness of which has been tested by the industry.
 
-### Weekness
+### Weakness
 
 * Paper's writing is hard to read and understand.
 * Many important details, including how to get the best data storage location, are not clear.

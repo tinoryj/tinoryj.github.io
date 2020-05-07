@@ -57,6 +57,6 @@ Introduce GoSeed which is a formulation of seeding as an integer linear programm
 * Detailed analysis of possible optimization methods and their trade-offs, the experiment is very complete.
 * Significant results compared to existing high-level works.
 
-### Weekness
+### Weakness
 
 * Combining container-level and chunk-level plans may have better effect.

@@ -63,6 +63,6 @@ Existing durability models cannot achieve both high performance and strong consi
 * Combining the good side of immediate durability and eventual durability, simple idea but very sufficient.
 * Very useful for many deployments that currently adopt eventual durability.
 
-### Weekness
+### Weakness
 
 * Not suitable for systems with high real-time performance.

@@ -17,36 +17,36 @@ SmartDedup achieves significant performance and endurance improvement with low r
 
 ## Why
 
-* Resource are highly limited on edge and IoT: Limited I/O performance, storage capacity, and endurance
+* Resource is highly limited on edge and IoT: Limited I/O performance, storage capacity, and endurance
 * **Main problem**: Is there enough data duplication in device workloads, and how to exploit it using limited resources on the device?
 
 ## How
 
-* Analysis smart phone trace ([link](http://visa.lab.asu.edu/traces)), all workloads have good level of deduplication.
+* Analysis smartphone trace ([link](http://visa.lab.asu.edu/traces)), all workloads have a good level of deduplication.
 * Two-level fingerprint stores: On-disk and In-memory
-    * In-memory fingerprint store only containes important fingerprints and organized by prefix tree (first 6 bit, second 6 bit, leaf->fingerprint group)
+    * In-memory fingerprint store only contains important fingerprints and organized by prefix tree (first 6 bit, second 6 bit, leaf->fingerprint group)
     * On-disk fingerprint store share same data structure with In-memory part, switch content as fingerprint group level.
 * Integrated hybrid deduplication: Out-of-line deduplicates data skipped by in-line
-    * In-line deduplication only search with In-memory fingerprint store, and pass non-deduplicated fingerprints to Out-of-line deduplication with *Skipped Buffer*
+    * In-line deduplication only search with In-memory fingerprint store and pass non-deduplicated fingerprints to Out-of-line deduplication with *Skipped Buffer*
     * Use page cache to reduce read overhead.
 * Dynamically adapted deduplication: According to resource availability and workload characteristics
-    * Not occupy too much CPU and stop deduplication when battery at low state
+    * Not occupy too much CPU and stop deduplication when battery at a low state
     * Gradually reduce the rate if the duplication level is dropping
     * Quickly increase the rate if the duplication level is growing
 
 
 ## Some Details
 
-* Evaluation with fixed size chunking to make use of page cache.
-* Use FIO to test influence of storage performance overhead.
+* Evaluation with fixed-size chunking to make use of page cache.
+* Use FIO to test the influence of storage performance overhead.
 
 ## Summary
 
 ### Strength
 
-* Based on real world trace analysis to find the problem.
-* Good fingerprint store design to fit for resource limited devices.
+* Based on real-world trace analysis to find the problem.
+* Good fingerprint store design to fit for resource-limited devices.
 
-### Weekness
+### Weakness
 
 * The "Dynamically adapted deduplication" idea is very straight forward, and evaluation on it is not enough (Lack of long-term testing effect).

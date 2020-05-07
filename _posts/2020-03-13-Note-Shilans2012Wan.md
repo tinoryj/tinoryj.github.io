@@ -49,6 +49,6 @@ Present a new method for replicate data via WAN which could eliminates duplicate
 * Real-world availability and small modify to origin DDFS.
 * Explore and analyze the similar chunks have locality as well as duplicate chunks. 
 
-### Weekness
+### Weakness
 
 * The paper also mentioned the impact of the coexistence of different backup streams, but it has not been resolved.

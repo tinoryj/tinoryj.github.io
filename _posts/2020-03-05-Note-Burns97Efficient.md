@@ -52,7 +52,7 @@ Design and implement a modified version storage system based on version jumping,
 * Mathematical axiomatic performance analysis
 * In theory, version jumping chain has high practicality, and can be compromised in compression effect and reduction speed.
 
-### Weekness
+### Weakness
 
 * Only theoretical analysis was performed, and the ADSM system was proposed to be modified without any testes and analysis.
 * Three delta chains are introduced in this article, but only linear delta chain and version jumping delta chain are analyzed in the performance analysis section.

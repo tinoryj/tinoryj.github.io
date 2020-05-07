@@ -59,6 +59,6 @@ This paper presents OPERA, an Open Platform for Enclave Remote Attestation. OPER
 
 * Without reducing (partially improving) the security, significantly reduce the latency of the enclave remote attestation, and improve the performance of the remote attestation.
 
-### Weekness
+### Weakness
 
 * Fullly proof of security, but difficult to understand.

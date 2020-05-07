@@ -8,7 +8,7 @@ tags: [DataStructure]
 
 ## Reference
 
-> Xingbo Wu, Fan Ni and Song Jiang. [Wormhole: A Fast Ordered Index for In-memory Data Management](https://dl.acm.org/doi/pdf/10.1145/3302424.3303955?download=true). In Proc. of EuroSys, 2019.
+> Xingbo Wu, Fan Ni, and Song Jiang. [Wormhole: A Fast Ordered Index for In-memory Data Management](https://dl.acm.org/doi/pdf/10.1145/3302424.3303955?download=true). In Proc. of EuroSys, 2019.
 
 ## What
 
@@ -18,11 +18,11 @@ A new ordered index structure, named **Wormhole**, which takes O(log L) worst-ca
 
 ## Why
 
-Problems with current index for in-memory data management systems (e.g., Key-value store):
+Problems with the current index for in-memory data management systems (e.g., Key-value store):
 
 * Unordered indexes - Hash Table:
     * Point search with O(1) time
-    * Cannot be used when require range queries
+    * Cannot be used when requiring range queries
 * Ordered indexes - B+ Tree & Skip List:
     * Point search with O(log N) time, where N is number of keys in an index
     * Support range queries
@@ -30,7 +30,7 @@ Problems with current index for in-memory data management systems (e.g., Key-val
 
 ## Main Idea
 
-* Based on the existing hash index and tree index, combining the advantages of the two to create a new index, at the same time to achieve efficient query and support for range query.
+* Based on the existing hash index and tree index, combining the advantages of the two to create a new index, at the same time to achieve efficient query and support for a range query.
 
 ## Design Goals
 
@@ -57,13 +57,13 @@ Problems with current index for in-memory data management systems (e.g., Key-val
 
 * Using MetaTrie:
     * For each node in the LeafList create a key as its anchor and insert it into MetaTrie. 
-    * Node’s anchor key is to serve as a borderline between this node and the node immediately on its left, assuming the sorted LeafList is laid out horizontally in an ascending order.
+    * Node’s anchor key is to serve as a borderline between this node and the node immediately on its left, assuming the sorted LeafList is laid out horizontally in ascending order.
     * For the anchor key (anchor-key) of a node (Node b), left-key < anchor-key < node-key; anchor key cannot be the prefix of another key.
     * Just like a simple Prefix Tree with container leafs
 
 ### Two search phase
 
-In the walk from the root of a MetaTrie to a search-key’s target leafnode:
+In the walk from the root of a MetaTrie to a search key's target leaf node:
 
 * The first one: conduct the longest prefix match (LPM) between the search key and the anchors in the trie.
 * If the longest prefix is not equal to an anchor, the second phase is to walk on a subtree rooted at a sibling of the token next to the matched prefix of the search key. The O(L) cost of each of the phases can be significantly reduced.
@@ -79,14 +79,14 @@ In the walk from the root of a MetaTrie to a search-key’s target leafnode:
     * The bit is set when the corresponding child exists. With the bitmap, sibling(s) of an unmatched token can be located in O(1) time.
 * Second field: two pointers.
     * Each pointing to one of the leaf nodes.
-* The hash tag and keys are sorted separately, and then pointed by the pointer.
+* The hashtag and keys are sorted separately, and then pointed by the pointer.
 
 ## Summary
 
 ### Strength
 
-* Combining the advantages of prefix tree, B + tree and hash table, the algorithm complexity is lower than the existing index structure
+* Combining the advantages of prefix tree, B + tree, and hash table, the algorithm complexity is lower than the existing index structure
 
-### Weekness
+### Weakness
 
 * Complex algorithm expression, reading is not smooth.

@@ -53,7 +53,7 @@ Carver is a file system parameters selection and tunning method, which uses:
 * Introduce Latin Hypercube Sampling which significantly reducing the parameters that need to be analyzed.
 * Reasonable function and threshold settings, so that only a small amount of data is needed to obtain near-optimal parameters.
 
-### Weekness
+### Weakness
 
 * The parameter setting obtained by this method is still an near-optimal solution.
 * This method is more like reducing the complexity of brute force calculations and forming a parameter importance experience without forming an axiomatic parameter setting scheme.

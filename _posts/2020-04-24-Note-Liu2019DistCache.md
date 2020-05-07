@@ -17,8 +17,8 @@ DistCache, a new distributed caching mechanism that provides provable (query) lo
 
 ## Why
 
-* Load balancing is critical for distribute storage.
-* A fast cache can guarantee load balancing for a clustered storage system. But not fit for multiple clusters (fast cache itself will become the bottleneck).
+* Load balancing is critical for distributed storage.
+* A fast cache can guarantee load balancing for a clustered storage system. But not fit for multiple clusters (the fast cache itself will become the bottleneck).
 * Exist method like cache partition and cache replication either result in load imbalance between cache nodes or have high overhead for cache coherence.
 
 ## Design Goals
@@ -40,7 +40,7 @@ DistCache, a new distributed caching mechanism that provides provable (query) lo
 * Use one cache node in each cluster for intra-cluster load balancing, and another layer of cache nodes for inter-cluster load balancing. **The challenge is on cache allocation.**
 * Current solutions:
     * **Cache Replication**: high cache coherence cost.
-    * **Cache Partition** : lead to imblance in different nodes.
+    * **Cache Partition** : lead to an imbalance in different nodes.
 
 ### Main Idea
 
@@ -55,32 +55,32 @@ DistCache, a new distributed caching mechanism that provides provable (query) lo
 **Two independent hashes $H_1$ and $H_2$ to allocate hot items**
 
 * Cache allocation with independent hash functions.
-* Upper layer and Lower layer use different hash funcations, same item will allocate to different cache nodes in different layers.
+* Upper layer and Lower layer use different hash functions, the same item will allocate to different cache nodes in different layers.
 
 ### How to query
 
 * **Power-of-two-choices (PoT)**: route the queries guarantee stable throughput.
-* PoT query can find a cache nodes perfect match for any query workload distribution.
-* The sender of a query check the loads of the cache nodes that cache the queried object, and sends the query to the less-loaded node.
-* Use perfect matching rather than setup a controller node for queries.
+* PoT query can find a cache node perfect match for any query workload distribution.
+* The sender of a query checks the loads of the cache nodes that cache the queried object and sends the query to the less-loaded node.
+* Use perfect matching rather than set up a controller node for queries.
 * *Proofs leverage tools* from expander graph, network flow, and querying theory
 
 ### Use Case
 
 * Distributed in-memory caching.
 * Switch-based distributed caching:
-  * client side switch decides which cache node to use (PoT);
-  * All switchs are programmable switches;  
+  * client-side switch decides which cache node to use (PoT);
+  * All switches are programmable switches;  
   * New designed network packet format (add cache information in packet headers)
 
 ## Summary
 
 ### Strength
 
-* Introduce graph theory algorithm to solve the best matching problem in cache node choose.
+* Introduce graph theory algorithm to solve the best matching problem in cache node chooses.
 * Axiomatic proof of validity.
 
-### Weekness
+### Weakness
 
 * The use case requires programmable switches to complete, the cost is very high.
 * According to the paper scheme, although the service provider is avoided to provide the *control node*, the customer still needs to use the *control switch* to determine the query direction.
