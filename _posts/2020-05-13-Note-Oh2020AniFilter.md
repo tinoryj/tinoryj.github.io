@@ -20,13 +20,13 @@ AniFilter (AF) is an optimized persistent Approximate Membership Query (AMQ) for
 
 ## Paper Summary
 
-AMQ data structures are widely used in storage systems. With the developement with Non-Volatile Memory (NVM) technologies, AMQ data structures need to fit NVM's byte-addressable and high performance features.
+AMQ data structures are widely used in storage systems. With the development of Non-Volatile Memory (NVM) technologies, AMQ data structures need to fit NVM's byte-addressable and high-performance features.
 
-This work proposed AniFilter (AF), which based on Cuckoo Filter (CF) to improve insertion throughput on NVM. CF is a space-efficient probabilistic data structure which is used to test whether an element is a member of a set, like a Bloom filter does, but support element eviction. When used for NVM, it's typical bucket size 6 byte is not suitable for NVM's 8 byte atomic write unit, and it's eviction overhead in high load factors(>75%) is worse in NVM because higher latency.
+This work proposed AniFilter (AF), which based on Cuckoo Filter (CF) to improve insertion throughput on NVM. CF is a space-efficient probabilistic data structure that is used to test whether an element is a member of a set like a Bloom filter does but support element eviction. When used for NVM, it's typical bucket size 6 byte is not suitable for NVM's 8-byte atomic write unit, and its eviction overhead in high load factors(>75%) is worse in NVM because of higher latency.
 
-It mainly used three techniques to optimize CF for NVM. The "Spillable Buckets" method allows fingerprint (FP) insert for each bucket store at a neighboring bucket, which could still fit the cache line size to limit eviction operations (only use the first slot for spill). The "Lookaheah Eviction" evict a fingerprint that does not incur further eviction, which use a occupancy flags to help select an FP to evict by enumerate the FPs in the bucket and evict the one whose alternate bucket is not full according to the occupancy flags. The "Bucket Primacy" make one of the two hashes bucket as the prime bucket, only access secondary bucket when prime bucket have no matching or free space.
+It mainly used three techniques to optimize CF for NVM. The "Spillable Buckets" method allows fingerprint (FP) insert for each bucket store at a neighboring bucket, which could still fit the cache line size to limit eviction operations (only use the first slot for spill). The "Lookaheah Eviction" evict a fingerprint that does not incur further eviction, which use an occupancy flag to help select an FP to evict by enumerating the FPs in the bucket and evict the one whose alternate bucket is not full according to the occupancy flags. The "Bucket Primacy" makes one of the two hashes buckets as the prime bucket, only access secondary bucket when the prime bucket has no matching or free space.
 
-For the three optimization schemes, this work gives the model and theoretical analysis, and implements the available prototypes. Finally, they evaluate it on real NVM device (Intel Optane) by compare with four exist filters for insert & search querys.
+For the three optimization schemes, this work gives the model and theoretical analysis and implements the available prototypes. Finally, they evaluate it on a real NVM device (Intel Optane) by comparing it with four existing filters for insert & search queries.
 
 ## Strength
 
@@ -38,4 +38,4 @@ For the three optimization schemes, this work gives the model and theoretical an
 
 ## Comments
 
-* Since the atomic write unit of NVM is 8byte, why not directly modify the size of each bucket of the filter to directly match NVM ?
+* Since the atomic write unit of NVM is 8byte, why not directly modify the size of each bucket of the filter to directly match NVM?
