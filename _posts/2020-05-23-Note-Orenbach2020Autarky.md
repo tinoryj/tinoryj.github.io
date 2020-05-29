@@ -12,7 +12,7 @@ tags: [SGX]
 
 ## What
 
-Autarky is a set ofminor, backward-compatible modifications to the SGX ISA that hide an enclave’s page access trace from the host, and give the enclave full control over its page faults.
+Autarky is a set of minor, backward-compatible modifications to the SGX ISA that hide an enclave’s page access trace from the host, and give the enclave full control over its page faults.
 <!-- more -->
 
 **Controlled-channel attacks**: based on page table attacks. This type uses the page table's access control to the enclave page, setting the enclave page to be inaccessible. At this time, any access will trigger a page fault exception, which can distinguish which pages the enclave visited. Combining these pieces of information in chronological order, it is possible to deduce certain states of the enclave and protected data.
