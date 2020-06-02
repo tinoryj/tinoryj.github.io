@@ -22,9 +22,9 @@ Modern datacenter uses many storage systems as redundancy to store data due to d
 
 This work combines replication and erasure coding to make the 2-replica with intra-disk erasure coding achieve quickly recover from two simultaneous disk failures like 3-replica.
 
-It divided each of the N disks into N-1 Superchunks. Set 2 replica for each Superchunk on a different disk, while makes any two disks share at most 1 Superchunk. To get benefits from erasure coding, RIADP adds a "disk add-on" (Lstor) for each disk to store the XOR result of all Superchunks in that disk. For only one disk lost, the user could restore the data from the other replica; For any two disk lost, the user could restore some of the Superchunks by the other replica (due to two disk only share at most 1 Superchunks), and restore the other Superchunks via erasure coding (do some XOR operations and transfer some Superchunks from another disk).
+It divided each of the N disks into N-1 Superchunks. Set 2 replica for each Superchunk on a different disk, while makes any two disks share at most 1 Superchunk. To get benefits from erasure coding, RIADP adds a "disk add-on" (Lstor, a hardware cheap, faster, and fail separately from disk) for each disk to store the XOR result of all Superchunks in that disk. For only one disk lost, the user could restore the data from the other replica; For any two disk lost, the user could restore some of the Superchunks by the other replica (due to two disk only share at most 1 Superchunks), and restore the other Superchunks via erasure coding (do some XOR operations and transfer some Superchunks from another disk).
 
-This work implements the RAIDP based on HDFS, and conduct a complete and convincing experiment to evaluate the performance compared with 3-replica HDFS and 2-replica HDFS to show that the performance is between the two types of HDFSs. And compare the Superchunk recovery procedure with RAID-6 on a network basis.
+This work implements the RAIDP based on HDFS (simulated lstors by DRAM), and conduct a complete and convincing experiment to evaluate the performance compared with 3-replica HDFS and 2-replica HDFS to show that the performance is between the two types of HDFSs. And compare the Superchunk recovery procedure with RAID-6 on a network basis.
 
 ## Strength
 
