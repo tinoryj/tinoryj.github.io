@@ -24,12 +24,12 @@ The main idea is using a larger data management unit Superchunk for 2-replica, a
 
 In practice, it divides each of the N disks into N-1 Superchunks. The Lstor stores parity is just XOR result for all Superchunks stores on the disk (Because when 2 disks fail, each failed disk at most has one Superchunk need to recover by erasure coding).  The RAIDP method can improve write performance by reducing 3 times write sync to 2, and incurs small performance overhead for data update thanks for the Superchunks layout.
 
-This work implements the RAIDP based on HDFS (simulated Lstors by DRAM) and conducts experiments to evaluate the read, write, update performance and CPU, network usages compared with 3-replica HDFS, and 2-replica HDFS by Hadoop standard, terasort, and wordcount benchmarks (Intel HiBench). It shows that RAIDP writes performance higher than 3-replica HDFS and lower than 2-replica HDFS while keeping almost the same read performance as 3-replica HDFS. It also compares the Superchunks recovery with network-based RAID-6 and shows RAIDP achieves a 14x shorter recovery time cost.
+This work implements the RAIDP based on HDFS (simulated Lstors by DRAM) and conducts experiments to evaluate the read, write, update performance and CPU, network usages compared with 3-replica HDFS, and 2-replica HDFS by Hadoop standard, terasort, and wordcount benchmarks (Intel HiBench). It shows that RAIDP writes performance higher than 3-replica HDFS and lower than 2-replica HDFS while keeping almost the same read performance as 3-replica HDFS. It also compares the Superchunks recovery with network-based RAID-6 and shows RAIDP achieves a 14x shorter recovery time cost because all parity computes localy.
 
 ## Strength
 
 * The paper is very well written, and the analysis of each design point is very full.
-* Simple idea achieves obvious effects and significantly reduces network traffic, power consumption, storage space costs compare with 3-replica and improve data recovery performance compare with erasure coding.
+* Simple idea achieves obvious effects: significantly reduces network traffic, power consumption, storage space costs compare with 3-replica, and improves data recovery performance compare with erasure coding.
 
 ## Weakness
 
