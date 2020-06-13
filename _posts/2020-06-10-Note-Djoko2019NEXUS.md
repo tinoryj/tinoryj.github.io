@@ -8,7 +8,7 @@ tags: [SGX]
 
 ## Reference
 
-> Djoko Judicael B, Lange Jack, Lee Adam J. [NEXUS: Practical and Secure Access Control on Untrusted Storage Platforms using Client-side SGX](https://dl.acm.org/doi/pdf/10.1145/3361525.3361533). In Proc. of DSN, 2019.
+> Djoko Judicael B, Lange Jack, Lee Adam J. [NEXUS: Practical and Secure Access Control on Untrusted Storage Platforms using Client-side SGX](http://www.prognosticlab.org/~jarusl/pubs/djoko2019dsn-nexus.pdf). In Proc. of DSN, 2019.
 
 ## What
 
