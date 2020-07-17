@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Note: HardIDX: Practical and Secure Index with SGX"
-date:   2020-07-10 12:00:00
+date:   2020-07-17 12:00:00
 categories: PaperReading
 tags: [SGX]
 ---
