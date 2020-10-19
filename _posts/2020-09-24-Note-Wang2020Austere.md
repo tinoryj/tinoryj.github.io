@@ -27,7 +27,7 @@ Flash cache can significantly improve the IO performance of the disk system. How
 
 This paper builds AustereCache to support memory-efficient indexing while preserving data benefits of deduplication and compression.
 
-The main idea of AustereCache is hashing to partition index and cache space which use the **prefix index** in the memory and the complete index in SSD to reduce the memory index space overhead (Tracking compressed lengths of chunks in SSD, not memory); Use the **bucket-based cache scheduling** replaces the scheduling for entire cache to optimize the efficiency of multi-threaded access; Combined with **compression** and  **deduplication** to reduce the storage space of data in the cache.
+The main idea of AustereCache is hashing to partition index and cache space which use the **prefix index** in the memory and the complete index in SSD to reduce the memory index space overhea d (Tracking compressed lengths of chunks in SSD, not memory); Use the **bucket-based cache scheduling** replaces the scheduling for entire cache to optimize the efficiency of multi-threaded access; Combined with **compression** and  **deduplication** to reduce the storage space of data in the cache.
 
 In practice, they use four bucket based data structures to locate cached data:
 
