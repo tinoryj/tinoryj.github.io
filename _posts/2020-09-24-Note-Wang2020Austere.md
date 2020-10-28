@@ -14,12 +14,12 @@ tags: [Cache, FileSystem, Compression, Deduplication]
 
 A flash cache mechanism for accelerating HDD based on deduplication and compression with less memory overhead.
 
+<!-- more -->
+
 ## Background
 
 * Flash Cache: Accelerate HDD storage by caching frequently accessed blocks in flash (SSD/PM).
 * LBA: chunk address in HDD
-
-<!-- more -->
 
 ## Paper Summary
 
