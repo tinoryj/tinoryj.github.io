@@ -32,9 +32,6 @@ This work design iDedup to get a good tradeoff between capacity saving and laten
 
 ## Strength
 
-
-## Weakness
-
-
+## Weakness  
 
 ## Comments
