@@ -53,5 +53,5 @@ Finally, they do experiments for latency-sensitive primary workloads, show that 
 ## Comments
 
 * CIFS network trace: include file access pattern and file size (better than S3Trace), but currently not found.
-* Could we do variable-size chunking for primary data deduplication to improve deduplication ratio while not introduce significant latency?
+* Could we do variable-size chunking for primary data deduplication to improve the deduplication ratio while not introduce significant latency?
   
