@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Note: iDedup: Latency-aware, inline data deduplication for primary storage."
-date:   2021-03-22 12:00:00
+date:   2021-04-01 12:00:00
 categories: PaperReading
 tags: [PrimaryStorage, Deduplication]
 ---
