@@ -10,16 +10,13 @@ tags: [PrimaryStorage, Deduplication]
 
 > Ahmed El-Shimi, Ran Kalach, Ankit Kumar, Adi Oltean, Jin Li, Sudipta Sengupta. [Primary data deduplication—large scale study and system design](https://www.usenix.org/system/files/conference/atc12/atc12-final293.pdf). In Proc. of ATC 2012.
 
-## What
+## Problem Statement
 
 <!-- more -->
 
-## Background
+## Literature Summary
 
-## Paper Summary
+## Approaches
 
-## Strength
+## Results
 
-## Weakness
-
-## Comments
